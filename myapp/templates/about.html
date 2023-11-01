@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PoreD2{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="\logo.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index:10;
+            background-color: #3b3b3b;
+            width: 100%;
+            height: 75px;            
+        }
+
+        * {
+            box-sizing:border-box;
+          }
+          
+          body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          
+          .container {
+            padding: 64px;
+          }
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both
+          }
+          
+          .column-66 {
+            float: left;
+            width: 66.66666%;
+            padding: 20px;
+          }
+          
+          .column-33 {
+            float: left;
+            width: 33.33333%;
+            padding: 20px;
+          }
+          
+          .large-font {
+            font-size: 48px;
+            margin-top: 10px;
+          }
+          
+          .xlarge-font {
+            font-size: 64px
+            
+          }
+          
+          .button {
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #c91111;
+            margin-top: 25px;
+          }
+
+          .orange{
+            margin-top: 10px;
+            text-align: justify; 
+
+          }
+          
+          img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+          }
+          
+          @media screen and (max-width: 1000px) {
+            .column-66,
+            .column-33 {
+              width: 100%;
+              text-align: center;
+            }
+            img {
+              margin: auto;
+            }
+          }
+
+
+    </style>
+
+</head>
+<body style="background-color:#f2f2f2;">
+    <header style="background-color:#3b3b3b">
+        <nav class="apppage">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/about/">About Us</a></li>
+                <li><a href="/app/">App</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="text-align:center">
+      </div>
+      
+      <!-- The App Section -->
+      <div class="container">
+        <div class="row">
+          <div class="column-66">
+            <h1 class="xlarge-font"><b>The PoreD2</b></h1>
+            <h1 class="large-font" style="color:#c91111;"><b>What is it for?</b></h1>
+            <p class="orange"><span style="font-size:36px">The fastest way</span> to quantification of SEM images of emulsion templated scaffolds.</p> <p class="orange">Current approaches have the following disadvantages: <strong>time-consuming</strong> method, it is <strong>not possible to quantify all pores and interconnects</strong>, and causes <strong>user bias</strong>.</p>
+            <a href="/app/"><button class="button">Try Application</button></a>
+          </div>
+          <div class="column-33">
+              <img src="/static/images/sample.png" width="529" height="471">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Clarity Section -->
+      <div class="container" style="background-color:#a10505">
+        <div class="row">
+          <div class="column-33">
+            <img src="/static/images/karaca.png" alt="App" width="400" height="471">
+          </div>
+          <div class="column-66">
+            <h1 class="xlarge-font"><b>İlayda Karaca</b></h1>
+            <h1 style="color:white;"><b>Chemical Biotechnology, MSc Student<p style="color:white;"><h5>Bioengineering, BSc</p></h5></b></h1>
+            <p class="orange">I have completed my bachelor's degree in bioengineering at Izmir Institute of Technology and I am continuing my master's degree in chemical biotechnology. </p>
+            <p class="orange">As an undergraduate student in my second year, I was an intern at the Laboratory of Biomedical Micro and Nanosystems (LBMS) for a year. During my internship, I got acquainted with machine learning and deep learning methods and worked on object detection methodologies.</p>
+            <p class="orange">Subsequently, in the third year of my bachelor's degree, I started working in the field of biomaterials and tissue engineering in the Baldemir Lab with Dr. Betül Aldemir Dikici. In this laboratory, I learned the basics of cell culture, the development of scaffolds with the emulsion templating method, the principles of tissue engineering and had the opportunity to apply my knowledge from my previous AI-based studies, and as a result, we have developed a fully automated deep learning-based system that measures the quantitative analysis of the emulsion-templated scaffolds from SEM images. Moreover, this project was entitled to be supported by the Scientific and Technological Research Institution of Turkey (TUBITAK).</p>
+            <a href="https://drive.google.com/file/d/1AjoiO-kn4BTrpvqbAEMxL5qKmbFzKeGc/view?usp=sharing"><button class="button" style="background-color:black">CV</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- The App Section -->
+      <div class="container">
+        <div class="row">
+          <div class="column-66">
+            <h1 class="xlarge-font"><b>Dr. Betül Aldemir Dikici</b></h1>
+            <p class="orange">Dr. Baldemir received her bachelor’s degree in Bioengineering and a masters degree in Biomedical Technologies. She has been awarded a post-graduate scholarship by Ministry of National Education of the Republic of Turkey and joined The University of Sheffield to pursue a PhD degree.</p>
+            <p class="orange">In the third year of her PhD education, she has been invited as a visiting researcher by Massachusetts Institute of Technology (MIT), Harvard-MIT Biomedical Engineering Centre as a part of a collaborative project, and she has been awarded the Battelle-Jeff Wadsworth Visiting Research Fellowship to conduct this collaboration. She obtained her PhD degree from the Department of Materials Science and Engineering, The University of Sheffield.</p>
+            <p class="orange">Dr Baldemir was awarded the "Mike Sellars Medal and Prize in Materials Science and Engineering" by the University of Sheffield for the high quality of her thesis. She was also awarded first place in 2020 (DRA 2020) in the Engineering Sciences category of the Doctoral Researcher Awards in the UK.</p>
+            <p class="orange">Her research interest focuses on developing and manufacturing porous polymeric biomaterials, using emulsion templating and additive manufacturing techniques for tissue engineering applications.</p>
+            <p class="orange">She is also passionate about the artistic representation of science. She creates scientific and medical illustrations, multi-tone false-coloured scanning electron microscopy images for better visual communication in science. Her scientific artworks have been granted national and international awards.</p>
+            <a href="https://www.baldemirlab.com/"><button class="button">Learn More</button></a>
+          </div>
+          <div class="column-33">
+              <img src="/static/images/baldemir.png" width="500" height="500" >
+          </div>
+        </div>
+      </div>
+      
+      
+</body>
+</html>

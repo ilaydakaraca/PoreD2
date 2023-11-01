@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}PoreD2{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="\logo.png">
+  {% load static %}  <!-- Add this line to load the static tag library -->
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% endblock %}
+</head>
+<body>
+  <header style="background-color:#3b3b3b">
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li> 
+        <li><a href="{% url 'about' %}" {% if request.path == '/about/' %}class="active"{% endif %}>About Us</a></li>
+        <li><a href="{% url 'app' %}" {% if request.path == '/app/' %}class="active"{% endif %}>App</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.path == '/contact/' %}class="active"{% endif %}>Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    {% block footer %}
+    {% endblock %}
+  </footer>
+
+  {% block scripts %}
+    <script src="{% static 'js/script.js' %}"></script>
+  {% endblock %}
+</body>
+</html>

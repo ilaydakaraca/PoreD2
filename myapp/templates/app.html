@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PoreD2{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="\logo.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          
+    </style>
+    
+</head>
+<body>
+    <main>
+        <nav class="apppage">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li class="active"><a href="/app/">App</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <form method="POST" enctype="multipart/form-data" id="upload-form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="dropzone-container">
+          <div class="dropzone-text">
+            <p>Drag and drop an image here, or click to select a file.</p>
+            <p>Only <strong>".png",".jpg",".jpeg"</strong> files are supported.</p>
+          </div>
+          <input type="file" id="id_image" name="image" class="upload-input" accept=".png, .jpg, .jpeg, .tif, .tiff">
+        </div>
+        {{ form.image.errors }}
+        <p class="help-text">{{ form.image.help_text }}</p>
+        <button type="submit">Upload</button>
+    </form>
+      
+</body>
+</html>

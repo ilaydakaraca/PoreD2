@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index:10;
+        background-color: #3b3b3b;
+        width: 100%;
+        height: 75px;            
+    }
+    
+    .box {
+        width: 200px;
+        height: 100px;
+        background: lightgrey;
+        padding: 0px;
+        margin: 150px;
+      }
+
+    .buttond {
+        border: none;
+        color: white;
+        padding: 10px 18px;
+        font-size: 10px;
+        cursor: pointer;
+        background-color: #c91111;
+        margin-top: 10px;
+      }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+    .align {
+        text-align: center;
+    }
+    </style>
+
+</head>
+
+
+<body style="background-color:#f2f2f2;">
+    
+    <div class="align"><h1>EASY PEASY</h1></div>
+
+    <div class="row">
+        <div class="column">
+            <img src="\pore\image0.jpg" alt="pore" width="459" height="330">
+        </div>
+        <div class="column">
+            <img src="\window\image0.jpg" alt="window" width="459" height="330">
+        </div>
+        <div class="column">
+            <img src="\scale_bar\image0.jpg" alt="scale-bar" width="459" height="330">
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="column">
+            <a class="box" href="\pore\image0.jpg" download><button class="buttond">Download Image (Pore)</button></a>
+        </div>
+        <div class="column">
+            <a class="box" href="\window\image0.jpg" download><button class="buttond">Download Image (window)</button></a>
+        </div>
+        <div class="column">
+            <a class="box" href="\scale_bar\image0.jpg" download><button class="buttond">Download Image (scale bar)</button></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <a class="box" href="\output_pore.xlsx" download><button class="buttond">Download Excel (Pore)</button></a>
+        </div>
+        <div class="column">
+            <a class="box" href="\output_window.xlsx" download><button class="buttond">Download Excel (window)</button></a>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <!-- Using an anchor tag (link) -->
+    
+
+</body>
+</html> 
+{% endblock %}
+
