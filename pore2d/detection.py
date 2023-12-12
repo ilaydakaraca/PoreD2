@@ -110,10 +110,10 @@ def detect_objects(image_filename):
 
   
     
-    input_ws['N1'] = 'Average Pore Size (px)'
-    input_ws['O1'] = 'Scale Bar Size'
-    input_ws['P1'] = 'Pore Size (um)'
-    input_ws['Q1'] = 'Pore Size (um) w/cf'
+    input_ws['N1'] = 'Avg. Pore Size (px)'
+    input_ws['O1'] = 'Scale Bar Size (px)'
+    input_ws['P1'] = 'Avg. Pore Size (um)'
+    input_ws['Q1'] = 'Avg. Pore Size (um) w/cf'
     input_ws['R1'] = 'Scale Bar Text'
     input_ws['S1'] = 'Scale Bar #'
     input_ws['T1'] = 'Scale Bar Unit'
@@ -243,9 +243,9 @@ def detect_objects(image_filename):
 
     #for window
     
-    input3_ws['M1'] = 'Average Window Size (px)'
-    input3_ws['N1'] = 'Scale Bar Size'
-    input3_ws['O1'] = 'Window Size (um)'
+    input3_ws['M1'] = 'Avg. Window Size (px)'
+    input3_ws['N1'] = 'Scale Bar Size (px)'
+    input3_ws['O1'] = 'Avg. Window Size (um)'
     input3_ws['P1'] = 'Scale Bar Text'
     input3_ws['Q1'] = 'Scale Bar #'
     input3_ws['R1'] = 'Scale Bar Unit'
