@@ -123,7 +123,7 @@ tensorboard-data-server==0.7.2
 termcolor==2.4.0
 terminaltables==3.1.10
 thop==0.1.1.post2209072238
-tifffile==2023.12.9
+tifffile==2023.4.12
 torch==2.1.1
 torchaudio==2.1.1
 torchvision==0.16.1
