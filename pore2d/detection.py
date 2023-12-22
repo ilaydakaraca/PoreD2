@@ -307,6 +307,8 @@ def detect_objects(image_filename):
     result = (m2_value / n2_value) * int(q2_value)
     input3_ws['O2'] = result
 
+    DI = result/result2
+    input3_ws["S2"] = DI
 
     original_column = input3_ws['K']
     new_column1 = input3_ws['L']
@@ -318,14 +320,17 @@ def detect_objects(image_filename):
 
     input3_ws['K1'] = 'Window Size (px)'
     input3_ws['L1'] = 'Window_Size (um)'
+    input3_ws['S1'] = 'Degree of Interconnectivity (DI)'
 
     fill3 = PatternFill(start_color="FF5F1F", end_color="FF5F1F", fill_type="solid")
     fill_cell11 = input3_ws['K1']
     fill_cell12 = input3_ws['L1']
     fill_cell13 = input3_ws['O1']
+    fill_cell19 = input3_ws['S1']
     fill_cell11.fill = fill3
     fill_cell12.fill = fill3
     fill_cell13.fill = fill3
+    fill_cell19.fill = fill3
 
     fill4 = PatternFill(start_color="EBECF0", end_color="EBECF0", fill_type="solid")
     fill_cell14 = input3_ws['M1']
